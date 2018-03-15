@@ -1,3 +1,5 @@
+//Tested on Arduino Nano. Ensure the PWMPin you select is appropriate for your Arduino model.
+
 word PWMPin = 3;
 
 void setup() {
