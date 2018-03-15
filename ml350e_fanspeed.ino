@@ -3,14 +3,15 @@ word PWMPin = 3;
 void setup() {
   pinMode(PWMPin, OUTPUT);
   
-  //Change the below 25kHz freqency if it is not in the acceptable range for your fan
   pwm25kHzBegin();
   
 }
 
 void loop() {
-  pwmDuty(65); // Change PWM to desired value here (For ML350e Gen8 fans, higher PWM = slower fan)
+  pwmDuty(65); // Change PWM duty cycle to desired value here (For ML350e Gen8 fans, higher PWM = slower fan)
                // 79/79 = slowest, 1/79 = fastest. 65/79, for example, is approx. 18% fan speed
+               // The ceiling value (default 79) can be changed with OCR2A below
+
 }
 
 void pwm25kHzBegin() {
